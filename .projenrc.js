@@ -6,12 +6,12 @@ const peerDeps = [];
 const project = new clickupCdk.ClickUpCdkConstructLibrary({
   name: 'cdk-user-with-access-key',
 
-  cdkVersion: '2.1.0',
+  cdkVersion: '2.13.0',
   defaultReleaseBranch: 'main',
   licensed: true,
 
   bundledDeps,
-  deps: [...bundledDeps, 'cdk-iam-floyd'],
+  deps: [...bundledDeps, 'cdk-iam-floyd', 'multi-convention-namer'],
   devDeps: [...peerDeps, '@time-loop/clickup-projen'],
 
   repositoryUrl: '', // leverage default
