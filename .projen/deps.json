@@ -132,10 +132,6 @@
       "type": "peer"
     },
     {
-      "name": "cdk-iam-floyd",
-      "type": "runtime"
-    },
-    {
       "name": "multi-convention-namer",
       "type": "runtime"
     }

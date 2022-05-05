@@ -11,7 +11,7 @@ const project = new clickupCdk.ClickUpCdkConstructLibrary({
   licensed: true,
 
   bundledDeps,
-  deps: [...bundledDeps, 'cdk-iam-floyd', 'multi-convention-namer'],
+  deps: [...bundledDeps, 'multi-convention-namer'],
   devDeps: [...peerDeps, '@time-loop/clickup-projen'],
 
   repositoryUrl: '', // leverage default

@@ -1,5 +1,4 @@
 import { aws_iam, aws_kms, aws_secretsmanager, RemovalPolicy } from 'aws-cdk-lib';
-import * as statement from 'cdk-iam-floyd';
 import { Construct } from 'constructs';
 import { Namer } from 'multi-convention-namer';
 
@@ -89,11 +88,11 @@ export module userWithAccessKey {
 
       const policy = new aws_iam.ManagedPolicy(this, new Namer(['secret', 'read', 'access']).pascal, {
         statements: [
-          new statement.Secretsmanager({ sid: 'ReadAccess' })
-            .allow()
-            .toGetSecretValue()
-            .toDescribeSecret()
-            .on(this.credentialsSecret.secretFullArn!),
+          new aws_iam.PolicyStatement({
+            sid: 'ReadAccess',
+            actions: ['DescribeSecret', 'GetSecretValue'].map((a) => `secretsmanager:${a}`),
+            resources: [this.credentialsSecret.secretFullArn!],
+          }),
         ],
       });
 
