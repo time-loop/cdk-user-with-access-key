@@ -43,6 +43,12 @@ new userWithAccessKey.UserWithAccessKey(scope: Construct, id: Namer, props?: Use
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.applyRemovalPolicy">applyRemovalPolicy</a></code> | Apply the given removal policy to this resource. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addManagedPolicy">addManagedPolicy</a></code> | Attaches a managed policy to the user. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToGroup">addToGroup</a></code> | Adds this user to a group. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToPolicy">addToPolicy</a></code> | Add to the policy of this principal. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToPrincipalPolicy">addToPrincipalPolicy</a></code> | Adds an IAM statement to the default policy. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.attachInlinePolicy">attachInlinePolicy</a></code> | Attaches a policy to this user. |
 
 ---
 
@@ -54,11 +60,109 @@ public toString(): string
 
 Returns a string representation of this construct.
 
+##### `applyRemovalPolicy` <a name="applyRemovalPolicy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.applyRemovalPolicy"></a>
+
+```typescript
+public applyRemovalPolicy(policy: RemovalPolicy): void
+```
+
+Apply the given removal policy to this resource.
+
+The Removal Policy controls what happens to this resource when it stops
+being managed by CloudFormation, either because you've removed it from the
+CDK application or because you've made a change that requires the resource
+to be replaced.
+
+The resource can be deleted (`RemovalPolicy.DESTROY`), or left in your AWS
+account for data recovery and cleanup later (`RemovalPolicy.RETAIN`).
+
+###### `policy`<sup>Required</sup> <a name="policy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.applyRemovalPolicy.parameter.policy"></a>
+
+- *Type:* aws-cdk-lib.RemovalPolicy
+
+---
+
+##### `addManagedPolicy` <a name="addManagedPolicy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addManagedPolicy"></a>
+
+```typescript
+public addManagedPolicy(policy: IManagedPolicy): void
+```
+
+Attaches a managed policy to the user.
+
+###### `policy`<sup>Required</sup> <a name="policy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addManagedPolicy.parameter.policy"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.IManagedPolicy
+
+The managed policy to attach.
+
+---
+
+##### `addToGroup` <a name="addToGroup" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToGroup"></a>
+
+```typescript
+public addToGroup(group: IGroup): void
+```
+
+Adds this user to a group.
+
+###### `group`<sup>Required</sup> <a name="group" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToGroup.parameter.group"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.IGroup
+
+---
+
+##### `addToPolicy` <a name="addToPolicy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToPolicy"></a>
+
+```typescript
+public addToPolicy(statement: PolicyStatement): boolean
+```
+
+Add to the policy of this principal.
+
+###### `statement`<sup>Required</sup> <a name="statement" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToPolicy.parameter.statement"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.PolicyStatement
+
+---
+
+##### `addToPrincipalPolicy` <a name="addToPrincipalPolicy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToPrincipalPolicy"></a>
+
+```typescript
+public addToPrincipalPolicy(statement: PolicyStatement): AddToPrincipalPolicyResult
+```
+
+Adds an IAM statement to the default policy.
+
+###### `statement`<sup>Required</sup> <a name="statement" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.addToPrincipalPolicy.parameter.statement"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.PolicyStatement
+
+---
+
+##### `attachInlinePolicy` <a name="attachInlinePolicy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.attachInlinePolicy"></a>
+
+```typescript
+public attachInlinePolicy(policy: Policy): void
+```
+
+Attaches a policy to this user.
+
+###### `policy`<sup>Required</sup> <a name="policy" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.attachInlinePolicy.parameter.policy"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.Policy
+
+---
+
 #### Static Functions <a name="Static Functions" id="Static Functions"></a>
 
 | **Name** | **Description** |
 | --- | --- |
 | <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.isResource">isResource</a></code> | Check whether the given construct is a Resource. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserArn">fromUserArn</a></code> | Import an existing user given a user ARN. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserAttributes">fromUserAttributes</a></code> | Import an existing user given user attributes. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserName">fromUserName</a></code> | Import an existing user given a username. |
 
 ---
 
@@ -80,11 +184,144 @@ Any object.
 
 ---
 
+##### `isResource` <a name="isResource" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.isResource"></a>
+
+```typescript
+import { userWithAccessKey } from '@time-loop/cdk-user-with-access-key'
+
+userWithAccessKey.UserWithAccessKey.isResource(construct: IConstruct)
+```
+
+Check whether the given construct is a Resource.
+
+###### `construct`<sup>Required</sup> <a name="construct" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.isResource.parameter.construct"></a>
+
+- *Type:* constructs.IConstruct
+
+---
+
+##### `fromUserArn` <a name="fromUserArn" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserArn"></a>
+
+```typescript
+import { userWithAccessKey } from '@time-loop/cdk-user-with-access-key'
+
+userWithAccessKey.UserWithAccessKey.fromUserArn(scope: Construct, id: string, userArn: string)
+```
+
+Import an existing user given a user ARN.
+
+If the ARN comes from a Token, the User cannot have a path; if so, any attempt
+to reference its username will fail.
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserArn.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+construct scope.
+
+---
+
+###### `id`<sup>Required</sup> <a name="id" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserArn.parameter.id"></a>
+
+- *Type:* string
+
+construct id.
+
+---
+
+###### `userArn`<sup>Required</sup> <a name="userArn" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserArn.parameter.userArn"></a>
+
+- *Type:* string
+
+the ARN of an existing user to import.
+
+---
+
+##### `fromUserAttributes` <a name="fromUserAttributes" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserAttributes"></a>
+
+```typescript
+import { userWithAccessKey } from '@time-loop/cdk-user-with-access-key'
+
+userWithAccessKey.UserWithAccessKey.fromUserAttributes(scope: Construct, id: string, attrs: UserAttributes)
+```
+
+Import an existing user given user attributes.
+
+If the ARN comes from a Token, the User cannot have a path; if so, any attempt
+to reference its username will fail.
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserAttributes.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+construct scope.
+
+---
+
+###### `id`<sup>Required</sup> <a name="id" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserAttributes.parameter.id"></a>
+
+- *Type:* string
+
+construct id.
+
+---
+
+###### `attrs`<sup>Required</sup> <a name="attrs" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserAttributes.parameter.attrs"></a>
+
+- *Type:* aws-cdk-lib.aws_iam.UserAttributes
+
+the attributes of the user to import.
+
+---
+
+##### `fromUserName` <a name="fromUserName" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserName"></a>
+
+```typescript
+import { userWithAccessKey } from '@time-loop/cdk-user-with-access-key'
+
+userWithAccessKey.UserWithAccessKey.fromUserName(scope: Construct, id: string, userName: string)
+```
+
+Import an existing user given a username.
+
+###### `scope`<sup>Required</sup> <a name="scope" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserName.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+construct scope.
+
+---
+
+###### `id`<sup>Required</sup> <a name="id" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserName.parameter.id"></a>
+
+- *Type:* string
+
+construct id.
+
+---
+
+###### `userName`<sup>Required</sup> <a name="userName" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.fromUserName.parameter.userName"></a>
+
+- *Type:* string
+
+the username of the existing user to import.
+
+---
+
 #### Properties <a name="Properties" id="Properties"></a>
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.env">env</a></code> | <code>aws-cdk-lib.ResourceEnvironment</code> | The environment this resource belongs to. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.stack">stack</a></code> | <code>aws-cdk-lib.Stack</code> | The stack in which this resource is defined. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.assumeRoleAction">assumeRoleAction</a></code> | <code>string</code> | When this Principal is used in an AssumeRole policy, the action to use. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.grantPrincipal">grantPrincipal</a></code> | <code>aws-cdk-lib.aws_iam.IPrincipal</code> | The principal to grant permissions to. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.policyFragment">policyFragment</a></code> | <code>aws-cdk-lib.aws_iam.PrincipalPolicyFragment</code> | Return the policy fragment that identifies this principal in a Policy. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.userArn">userArn</a></code> | <code>string</code> | An attribute that represents the user's ARN. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.userName">userName</a></code> | <code>string</code> | An attribute that represents the user name. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.permissionsBoundary">permissionsBoundary</a></code> | <code>aws-cdk-lib.aws_iam.IManagedPolicy</code> | Returns the permissions boundary attached  to this user. |
+| <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.principalAccount">principalAccount</a></code> | <code>string</code> | The AWS account ID of this principal. |
 | <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.credentialsSecret">credentialsSecret</a></code> | <code>aws-cdk-lib.aws_secretsmanager.ISecret</code> | *No description.* |
 | <code><a href="#@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.encryptionKey">encryptionKey</a></code> | <code>aws-cdk-lib.aws_kms.IKey</code> | *No description.* |
 
@@ -99,6 +336,126 @@ public readonly node: Node;
 - *Type:* constructs.Node
 
 The tree node.
+
+---
+
+##### `env`<sup>Required</sup> <a name="env" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.env"></a>
+
+```typescript
+public readonly env: ResourceEnvironment;
+```
+
+- *Type:* aws-cdk-lib.ResourceEnvironment
+
+The environment this resource belongs to.
+
+For resources that are created and managed by the CDK
+(generally, those created by creating new class instances like Role, Bucket, etc.),
+this is always the same as the environment of the stack they belong to;
+however, for imported resources
+(those obtained from static methods like fromRoleArn, fromBucketName, etc.),
+that might be different than the stack they were imported into.
+
+---
+
+##### `stack`<sup>Required</sup> <a name="stack" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.stack"></a>
+
+```typescript
+public readonly stack: Stack;
+```
+
+- *Type:* aws-cdk-lib.Stack
+
+The stack in which this resource is defined.
+
+---
+
+##### `assumeRoleAction`<sup>Required</sup> <a name="assumeRoleAction" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.assumeRoleAction"></a>
+
+```typescript
+public readonly assumeRoleAction: string;
+```
+
+- *Type:* string
+
+When this Principal is used in an AssumeRole policy, the action to use.
+
+---
+
+##### `grantPrincipal`<sup>Required</sup> <a name="grantPrincipal" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.grantPrincipal"></a>
+
+```typescript
+public readonly grantPrincipal: IPrincipal;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.IPrincipal
+
+The principal to grant permissions to.
+
+---
+
+##### `policyFragment`<sup>Required</sup> <a name="policyFragment" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.policyFragment"></a>
+
+```typescript
+public readonly policyFragment: PrincipalPolicyFragment;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.PrincipalPolicyFragment
+
+Return the policy fragment that identifies this principal in a Policy.
+
+---
+
+##### `userArn`<sup>Required</sup> <a name="userArn" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.userArn"></a>
+
+```typescript
+public readonly userArn: string;
+```
+
+- *Type:* string
+
+An attribute that represents the user's ARN.
+
+---
+
+##### `userName`<sup>Required</sup> <a name="userName" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.userName"></a>
+
+```typescript
+public readonly userName: string;
+```
+
+- *Type:* string
+
+An attribute that represents the user name.
+
+---
+
+##### `permissionsBoundary`<sup>Optional</sup> <a name="permissionsBoundary" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.permissionsBoundary"></a>
+
+```typescript
+public readonly permissionsBoundary: IManagedPolicy;
+```
+
+- *Type:* aws-cdk-lib.aws_iam.IManagedPolicy
+
+Returns the permissions boundary attached  to this user.
+
+---
+
+##### `principalAccount`<sup>Optional</sup> <a name="principalAccount" id="@time-loop/cdk-user-with-access-key.userWithAccessKey.UserWithAccessKey.property.principalAccount"></a>
+
+```typescript
+public readonly principalAccount: string;
+```
+
+- *Type:* string
+
+The AWS account ID of this principal.
+
+Can be undefined when the account is not known
+(for example, for service principals).
+Can be a Token - in that case,
+it's assumed to be AWS::AccountId.
 
 ---
 
