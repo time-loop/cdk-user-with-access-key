@@ -70,7 +70,6 @@
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "cdk-iam-floyd": "^0.357.0",
     "multi-convention-namer": "^0.1.11"
   },
   "keywords": [
