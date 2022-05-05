@@ -51,13 +51,12 @@ export module userWithAccessKey {
     readonly secretName?: string;
   }
 
-  export class UserWithAccessKey extends Construct {
+  export class UserWithAccessKey extends aws_iam.User {
     readonly credentialsSecret: aws_secretsmanager.ISecret;
     readonly encryptionKey: aws_kms.IKey;
-    readonly user: aws_iam.IUser;
 
     constructor(scope: Construct, id: Namer, props?: UserWithAccessKeyProps) {
-      super(scope, id.pascal);
+      super(scope, id.pascal, props);
 
       this.encryptionKey =
         props?.encryptionKey ??
@@ -66,10 +65,9 @@ export module userWithAccessKey {
           removalPolicy: RemovalPolicy.DESTROY,
         });
 
-      this.user = new aws_iam.User(this, 'User', props);
-      this.user.applyRemovalPolicy(RemovalPolicy.DESTROY);
+      this.applyRemovalPolicy(RemovalPolicy.DESTROY);
 
-      const accessKey = new aws_iam.AccessKey(this, 'AccessKey', { user: this.user });
+      const accessKey = new aws_iam.AccessKey(this, 'AccessKey', { user: this });
       accessKey.applyRemovalPolicy(RemovalPolicy.DESTROY);
 
       const secretStringBeta1 = aws_secretsmanager.SecretStringValueBeta1.fromToken(
