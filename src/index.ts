@@ -1,4 +1,4 @@
-import { aws_iam, aws_kms, aws_secretsmanager, RemovalPolicy } from 'aws-cdk-lib';
+import { aws_iam, aws_kms, aws_secretsmanager, RemovalPolicy, SecretValue } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { Namer } from 'multi-convention-namer';
 
@@ -70,10 +70,10 @@ export module userWithAccessKey {
       const accessKey = new aws_iam.AccessKey(this, 'AccessKey', { user: this });
       accessKey.applyRemovalPolicy(RemovalPolicy.DESTROY);
 
-      const secretStringBeta1 = aws_secretsmanager.SecretStringValueBeta1.fromToken(
+      const secretStringValue = SecretValue.unsafePlainText(
         JSON.stringify({
           accessKeyId: accessKey.accessKeyId,
-          secretAccessKey: accessKey.secretAccessKey.toString(),
+          secretAccessKey: accessKey.secretAccessKey.unsafeUnwrap(),
         }),
       );
 
@@ -82,7 +82,7 @@ export module userWithAccessKey {
         encryptionKey: this.encryptionKey,
         removalPolicy: RemovalPolicy.DESTROY,
         secretName: props?.secretName,
-        secretStringBeta1,
+        secretStringValue,
       });
 
       const policy = new aws_iam.ManagedPolicy(this, new Namer(['secret', 'read', 'access']).pascal, {

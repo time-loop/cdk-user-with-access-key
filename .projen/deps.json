@@ -25,7 +25,7 @@
     },
     {
       "name": "aws-cdk-lib",
-      "version": "2.13.0",
+      "version": "2.23.0",
       "type": "build"
     },
     {
@@ -63,13 +63,12 @@
       "type": "build"
     },
     {
-      "name": "jest-junit",
-      "version": "^13",
+      "name": "jest",
       "type": "build"
     },
     {
-      "name": "jest",
-      "version": "^27",
+      "name": "jest-junit",
+      "version": "^13",
       "type": "build"
     },
     {
@@ -124,7 +123,7 @@
     },
     {
       "name": "aws-cdk-lib",
-      "version": "^2.13.0",
+      "version": "^2.23.0",
       "type": "peer"
     },
     {

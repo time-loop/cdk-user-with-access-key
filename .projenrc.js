@@ -6,7 +6,7 @@ const peerDeps = [];
 const project = new clickupCdk.ClickUpCdkConstructLibrary({
   name: 'cdk-user-with-access-key',
 
-  cdkVersion: '2.13.0',
+  cdkVersion: '2.23.0',
   defaultReleaseBranch: 'main',
   licensed: true,
 
