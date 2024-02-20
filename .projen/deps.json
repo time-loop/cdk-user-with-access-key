@@ -136,6 +136,11 @@
       "type": "override"
     },
     {
+      "name": "npm-check-updates",
+      "version": "16.10.8",
+      "type": "override"
+    },
+    {
       "name": "aws-cdk-lib",
       "version": "^2.23.0",
       "type": "peer"
