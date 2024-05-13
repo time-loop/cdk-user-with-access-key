@@ -13,8 +13,8 @@ importers:
         version: 0.1.15
     devDependencies:
       '@time-loop/clickup-projen':
-        specifier: ^1.10.2
-        version: 1.10.2(projen@0.81.10(constructs@10.0.5))
+        specifier: ^1.10.6
+        version: 1.10.6(projen@0.81.10(constructs@10.0.5))
       '@types/jest':
         specifier: ^27
         version: 27.5.2
@@ -827,8 +827,8 @@ packages:
     resolution: {integrity: sha512-R8Rdn8Hy72KKcebgLiv8jQcQkXoLMOGGv5uI1/k0l+snqkOzQ1R0ChUBCxWMlBsFMekWjq0wRudIweFs7sKT5A==}
     engines: {node: '>=14.0.0'}
 
-  '@time-loop/clickup-projen@1.10.2':
-    resolution: {integrity: sha512-eDqniAF3zWpSSIBQhS5GC8bgo9GdV3kbC5htbji8vrB0G5kaNYi9CeD5ERlZdXg94vybr3H47yi9uWm7EZ0QzQ==, tarball: https://npm.pkg.github.com/download/@time-loop/clickup-projen/1.10.2/a3a6f813ecb20fcb5634ccaea4d3faefd07549ac}
+  '@time-loop/clickup-projen@1.10.6':
+    resolution: {integrity: sha512-ItU0Vt0/nJPoDYEiQEPJG0Lt47R1hzXoB7vdkCK/KAeUi283spKBXlJUmaZYOniVJ6g6ntaTffLSCf1MY9gw4A==, tarball: https://npm.pkg.github.com/download/@time-loop/clickup-projen/1.10.6/d0e8ed06b3a6cbabb1007ee0b02e6d368437a3c6}
     engines: {node: '>= 18.17.1'}
     peerDependencies:
       projen: ^0.81.8
@@ -1287,6 +1287,7 @@ packages:
   constructs@10.0.5:
     resolution: {integrity: sha512-IwOwekzrASFC3qt4ozCtV09rteAIAesuCGsW0p+uBfqHd2XcvA5CXqJjgf4eUqm6g8e/noXlVCMDWwC8GaLtrg==}
     engines: {node: '>= 10.17.0'}
+    bundledDependencies: []
 
   conventional-changelog-angular@5.0.13:
     resolution: {integrity: sha512-i/gipMxs7s8L/QeuavPF2hLnJgH6pEZAttySB6aiQLWcX3puWDL3ACVmvBhJGxnAy52Qc15ua26BufY6KpmrVA==}
@@ -3255,8 +3256,8 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
 
-  typescript@5.5.0-dev.20240513:
-    resolution: {integrity: sha512-EaabRW/mNcpehitpeUkoIg8mNRGl5twGUzHJEJE9qTMlvVzoctff/XFZGKrxu9PUUcYluaMQTBNdNuqOZMqvTw==}
+  typescript@5.5.0-dev.20240514:
+    resolution: {integrity: sha512-NccALPZlTF/kDNV2Q071Or2T5CcoAHodWjsKseA4LZKfdqufQzebaQlPuZatC8AgHY2cnQJBcKMCHNFWW9ubpA==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -4780,7 +4781,7 @@ snapshots:
       '@smithy/util-buffer-from': 2.2.0
       tslib: 2.6.2
 
-  '@time-loop/clickup-projen@1.10.2(projen@0.81.10(constructs@10.0.5))':
+  '@time-loop/clickup-projen@1.10.6(projen@0.81.10(constructs@10.0.5))':
     dependencies:
       projen: 0.81.10(constructs@10.0.5)
 
@@ -5542,7 +5543,7 @@ snapshots:
     dependencies:
       semver: 7.6.2
       shelljs: 0.8.5
-      typescript: 5.5.0-dev.20240513
+      typescript: 5.5.0-dev.20240514
 
   electron-to-chromium@1.4.764: {}
 
@@ -7681,7 +7682,7 @@ snapshots:
 
   typescript@5.3.3: {}
 
-  typescript@5.5.0-dev.20240513: {}
+  typescript@5.5.0-dev.20240514: {}
 
   uglify-js@3.17.4:
     optional: true
